@@ -15,13 +15,16 @@ public class Proyect1 {
 			// palabraNueva=palabraNueva+palabras[i].substring(1,palabras[i].length())+palabras[i].substring(0,1)+"ay // "; //Ejercicio 2
 			palabraNueva = palabraNueva + palabraFinal(palabras[i]);
 		}
+		
+		palabraNueva=palabraNueva.substring(0,palabraNueva.length()-2)+"!";
+		
 		System.out.println("La palabra nueva es: " + palabraNueva);
 	}
 
 	//Ejercicio 3
 	public static String palabraFinal(String aux) {
 		String primeraLetra = aux.substring(1, 2);
-		aux = primeraLetra.toUpperCase() + aux.substring(2, aux.length()) + aux.substring(0, 1) + "ay ";
+		aux = primeraLetra.toUpperCase() + aux.substring(2, aux.length()) + aux.substring(0, 1) + "ay, ";
 		return aux;
 	}
 
